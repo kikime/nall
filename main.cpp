@@ -34,7 +34,8 @@ namespace nall
 int main(int argc, char *argv[])
 {
   if (argc == 1) {
-    std::cout << "nall v" << nall::version << " by Niclas Meyer (@_njdm).\n\nTry `" << argv[0] << " -h` for help.\n";
+    std::cout << "nall v" << nall::version << " by Niclas Meyer (@_njdm).\n\n"
+      "Try `" << argv[0] << " -h` for help.\n";
     return 0;
   }
 
@@ -50,7 +51,9 @@ int main(int argc, char *argv[])
     }
 
     if (nall::paramcheck(argv[i], "version", 'v')) {
-      // TODO: Write version / about
+      std::cout << "nall v" << nall::version << " by Niclas Meyer (@_njdm)\n\n"
+        "nall is a small preprocessor to handle preprocessing.\n"
+        "For more info read the README or LICENSE.\n";
 
       return 0;
     }
