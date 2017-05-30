@@ -42,7 +42,9 @@ int main(int argc, char *argv[])
   // Go over argv
   for (int i = 1; i < argc; ++i) {
     if (nall::paramcheck(argv[i], "help", 'h')) {
-      // TODO: Write help
+      std::cout << "nall v" << nall::version << "\n"
+        "\t-h --help       print this dialog\n"
+        "\t-v --version    print a short about dialog\n";
 
       return 0;
     }
